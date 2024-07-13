@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --yellow-grad: #faf002;
+  --pink-grad: #ff18e8;
+}
+
+.App {
+  color: white;
+  text-align: center;
+}
+
+.container {
+  width: 15rem;
+  height: 15rem;
+  background-image: linear-gradient(to top right, var(--yellow-grad), var(--pink-grad));
+  border-radius: 5px;
+}
+
+body {
+  margin: 10px !important
+}

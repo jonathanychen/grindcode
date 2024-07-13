@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "name": "Grindcode",
+  "description": "A Chrome extension for all of your LeetCode grind needs!",
+  "action": {
+      "default_popup": "js/index.html",
+      "default_title": "Grindcode",
+      "default_icon": "js/icon.png"
+  }
+}
