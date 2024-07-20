@@ -7,13 +7,50 @@
   --pink-grad: #ff18e8;
 }
 
+html {
+  margin: 0;
+  width: 30rem;
+}
+
+html:before{
+  content:"";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: linear-gradient(to top right, var(--yellow-grad), var(--pink-grad));
+}
+
+body {
+  overflow: scroll;
+  position: relative;
+  background: transparent;
+}
+
+.solid {
+  background-color: white;
+}
+
 .App {
+  margin: 0;
+  height: 100%;
   color: white;
   text-align: center;
 }
 
-.container {
-  width: 20rem;
-  height: 20rem;
-  background-image: linear-gradient(to top right, var(--yellow-grad), var(--pink-grad));
+.App:before{
+  content: "";
+  height: 100%;
+  width: 30rem;
+  position: fixed;
+  /* background: linear-gradient(to top right, var(--yellow-grad), var(--pink-grad)); */
 }
+
+.container {
+  overflow: scroll;
+  width: 30rem;
+  height: 100%;
+  position: relative;
+  background: transparent;
+}
+
+
