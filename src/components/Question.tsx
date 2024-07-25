@@ -33,21 +33,27 @@ function Question({
   }
 
   return (
-    <div className="flex flex-col justify-center mx-2 mb-2 text-black max-w-full px-4">
-      <div className="flex flex-row align-text-top items-center max-w-full justify-start">
+    <div className="flex flex-col justify-center mx-2 mb-2 text-black max-w-full h-fit px-4">
+      <div className="flex flex-row align-text-top items-center max-w-full justify-center">
         <h2 className="text-lg mr-2 truncate">{questionId + ": " + title}</h2>
+
         <div className="cursor-pointer">
-          <a href={LEETCODE_BASE_URL + link} rel="noreferrer" target="_blank">
-            <FaLink size={16} color="blue" className="cursor-pointer" />
+          <a
+            href={LEETCODE_BASE_URL + link}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <FaLink size={16} color="blue" />
           </a>
         </div>
+
         <QuestionStatus titleSlug={titleSlug} />
       </div>
 
-      <div className="flex flex-row flex-nowrap text-white text-sm w-full rounded-md mt-1 mx-2">
+      <div className="flex flex-row flex-wrap w-full rounded-md mt-1 justify-center">
         <span
           className={
-            `inline-flex items-center rounded-full mr-2 px-2 py-1 text-xs font-medium ring-1 ring-inset ` +
+            `inline-flex items-center rounded-full mr-2 mb-2 px-2 py-1 text-xs font-medium ring-1 ring-inset text-nowrap ` +
             difficultyColor
           }
         >
@@ -57,7 +63,7 @@ function Question({
           topics.map((t, id) => (
             <span
               key={id}
-              className="inline-flex items-center rounded-full mr-1 bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+              className="inline-flex items-center rounded-full mr-1 mb-2 bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 text-nowrap"
             >
               {t}
             </span>

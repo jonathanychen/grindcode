@@ -81,7 +81,7 @@ function DailyQuestion() {
   }, [dailyQuestion]);
 
   return (
-    <div className="flex flex-col justify-between bg-white rounded-xl w-full my-4 shadow-lg h-24">
+    <div className="flex flex-col justify-between bg-white rounded-xl w-full my-4 shadow-lg min-h-24">
       <h1 className="text-md text-black mt-2">
         Official Leetcode Daily Question
       </h1>
