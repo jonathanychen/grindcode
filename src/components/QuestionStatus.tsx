@@ -1,58 +1,16 @@
-import React, { useState, useEffect } from "react";
 import {
   IoCheckmarkCircleOutline,
   IoEllipsisHorizontalCircle,
 } from "react-icons/io5";
 
-import { LEETCODE_GRAPHQL_API } from "../common";
+import useQuestionStatus from "../hooks/useQuestionStatus";
 
 export type QuestionStatusProps = {
-  titleSlug?: string;
+  titleSlug: string;
 };
 
 function QuestionStatus({ titleSlug }: QuestionStatusProps) {
-  const [questionStatus, setQuestionStatus] = useState<string>("");
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  useEffect(() => {
-    const query = `query userQuestionStatus($titleSlug: String!) {
-      question(titleSlug: $titleSlug) {
-        status
-      }
-    }`;
-
-    const request = {
-      operationName: "userQuestionStatus",
-      query: query,
-      variables: {
-        titleSlug: titleSlug,
-      },
-    };
-
-    const fetchData = async () => {
-      const response = await fetch(LEETCODE_GRAPHQL_API, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify(request),
-      });
-      const responseData = await response.json();
-
-      console.log(responseData);
-
-      setQuestionStatus(responseData.data.question.status);
-    };
-
-    setIsLoading(true);
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    if (questionStatus != "") {
-      setIsLoading(false);
-    }
-  }, [questionStatus]);
+  const [questionStatus, isLoading] = useQuestionStatus(titleSlug);
 
   if (isLoading) {
     return <></>;

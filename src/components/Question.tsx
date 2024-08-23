@@ -1,4 +1,3 @@
-import React from "react";
 import { FaLink } from "react-icons/fa";
 import { LEETCODE_BASE_URL } from "../common";
 import QuestionStatus from "./QuestionStatus";
@@ -6,13 +5,13 @@ import QuestionStatus from "./QuestionStatus";
 type QuestionDifficulty = "Easy" | "Medium" | "Hard";
 
 export type QuestionProps = {
-  title?: string;
-  titleSlug?: string;
-  link?: string;
-  questionId?: string;
-  difficulty?: QuestionDifficulty;
-  topics?: string[];
-  status?: boolean;
+  title: string;
+  titleSlug: string;
+  link: string;
+  questionId: string;
+  difficulty: QuestionDifficulty;
+  topics: string[];
+  status: boolean;
 };
 
 function Question({
