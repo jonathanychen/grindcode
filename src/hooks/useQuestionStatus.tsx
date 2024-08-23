@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { LEETCODE_GRAPHQL_API } from '../common';
 
 function useQuestionStatus(titleSlug: string) {

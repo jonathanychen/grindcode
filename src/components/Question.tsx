@@ -1,3 +1,4 @@
+import React from "react";
 import { FaLink } from "react-icons/fa";
 import { LEETCODE_BASE_URL } from "../common";
 import QuestionStatus from "./QuestionStatus";

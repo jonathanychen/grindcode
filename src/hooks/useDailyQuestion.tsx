@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { QuestionProps } from "../components/Question"
 import { LEETCODE_GRAPHQL_API } from "../common";
 

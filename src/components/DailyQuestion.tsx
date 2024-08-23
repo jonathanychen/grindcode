@@ -1,3 +1,4 @@
+import React from "react";
 import { BarLoader } from "react-spinners";
 import Question from "./Question";
 import useDailyQuestion from "../hooks/useDailyQuestion";
